@@ -2,7 +2,10 @@ Data Science Twitter App
 ========================
 
 This app is available as a [Docker image][1].  
-If you download and run the Docker image, you should be able to use the app at **http://localhost:8501**.
+If you download and run the Docker image, you should be able to use the app at **http://localhost:8501**.  
+Alternatively, you can clone this repository, enter the twitter_app folder, and do the following:
+* run the command ``pip install -r requirements.txt`` to install the app dependencies; and
+* run the command ``streamlit run twitter_app.py`` to execute the app and use it.
 
 Among the libraries used, these are worth mentioning:
 * [Tweepy][3], used for accessing the Twitter API;
