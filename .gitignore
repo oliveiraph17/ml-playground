@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # These are personal
-twitter_app/my_twitter_credentials.py
+# twitter_app/my_twitter_credentials.py
