@@ -17,11 +17,11 @@ from tweepy import Cursor
 from tweepy import OAuthHandler
 
 # File storing the user credentials to access the Twitter API.
-import twitter_credentials
+import my_twitter_credentials
 
 
-VOCABULARY_FILENAME = 'vocabulary.joblib'
-MODEL_FILENAME = 'fitted_multinomial_nb.joblib'
+VOCABULARY_FILENAME = 'better_learned_vocabulary.joblib'
+MODEL_FILENAME = 'better_fitted_multinomial_nb.joblib'
 
 
 ###############################################################################
