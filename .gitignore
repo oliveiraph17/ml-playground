@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# These are personal
+twitter_app/my_twitter_credentials.py
