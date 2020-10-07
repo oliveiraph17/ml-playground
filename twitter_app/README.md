@@ -9,7 +9,7 @@ Alternatively, you can clone this repository, enter the twitter_app folder, and 
 
 Among the libraries used, these are worth mentioning:
 * [Tweepy][3], used for accessing the Twitter API;
-* [spaCy][4], which is an NLP library that I used for tokenizing tweets; and
+* [spaCy][4], which is an NLP library that I used for tokenizing and lemmatizing tweets; and
 * [Streamlit][5], which is a framework for creating ML apps with a GUI.
 
 I built my own tokenizer based on a spaCy model called [pt_core_news_sm][6].  
