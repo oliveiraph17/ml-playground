@@ -33,11 +33,11 @@ class TwitterAuthenticator():
     """
     def authenticate_app(self):
         # The keys are unique identifiers that authenticate the app.
-        auth = OAuthHandler(twitter_credentials.CONSUMER_KEY,
-                            twitter_credentials.CONSUMER_KEY_SECRET)
+        auth = OAuthHandler(my_twitter_credentials.CONSUMER_KEY,
+                            my_twitter_credentials.CONSUMER_KEY_SECRET)
         # The tokens allow the app to gain specific access to Twitter data.
-        auth.set_access_token(twitter_credentials.ACCESS_TOKEN,
-                              twitter_credentials.ACCESS_TOKEN_SECRET)
+        auth.set_access_token(my_twitter_credentials.ACCESS_TOKEN,
+                              my_twitter_credentials.ACCESS_TOKEN_SECRET)
         return auth
 
 
@@ -80,7 +80,7 @@ def spacy_tokenizer(tweet):
 # Execution code.
 ###############################################################################
 def get_training_data():
-    df = pd.read_csv('../datasets/kaggle/training_data/50k.csv', sep=';')
+    df = pd.read_csv('50k.csv', sep=';')
     X = df['tweet_text']
     y = df['sentiment']
     return df, train_test_split(X, y, test_size=0.01, random_state=17)
@@ -96,7 +96,6 @@ def execute_pipeline(X_train, X_test, y_train, y_test):
     except OSError:
         # The parameter to the tokenizer is a callable.
         vectorizer = CountVectorizer(tokenizer=spacy_tokenizer)
-        # vectorizer = CountVectorizer(tokenizer=spacy_tokenizer)
         classifier = MultinomialNB()
         # Pipeline for cleaning, vectorizing and classifying tweets.
         pipeline = Pipeline([('vectorizer', vectorizer),
